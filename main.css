@@ -1,0 +1,227 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+/** Principal **/
+.principal
+{
+    display: flex;
+    flex-wrap: wrap;
+    
+    overflow: hidden;
+    
+}
+.principal > div{
+    flex: 1 1 100%;
+}
+
+/**Jorge **/
+
+.jorge{
+    display: flex;
+   justify-content: space-between;
+   align-items: center;
+   border-bottom: .5px dashed #707070;
+}
+.content{
+    margin: 20px;
+}
+.content h1{
+    color: #F37C7C;
+    font-size: 2.1em;
+}
+.content p{
+    font-weight: 200px;
+    margin-left: 1px;
+    font-size: 17px;
+}
+
+.button {
+    display: flex;
+    flex-direction: column;
+    margin-right: 40px;
+}
+.button span{
+    background-color: #707070;
+    display: inline-block;
+    width: 80px;
+    height: 2px;
+    margin-top: 10px;
+}
+
+
+/**Navbar**/
+.navbar{
+    
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    text-align: left;
+    flex-wrap: wrap;
+
+   
+}
+.barra{
+    transition: transform 2s ease;
+
+}
+
+
+.navbar li {
+    margin: 15px;
+    padding: 10px;
+    flex: 1 1 100%;
+    text-align: center;
+    border: 1px solid black;
+
+    width: 50%;
+
+}
+.navbar li a{
+      
+
+
+    text-decoration: none;
+    color: #000;
+
+
+}
+
+/**Principa*/
+
+.main_content{
+    background-image: url(fondo.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 86vh;
+
+}
+.container_box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.box{
+    background-color: rgba(255, 255, 255, .5);
+    margin: 25px;
+    padding: 15px;
+  
+    text-align: justify;
+}
+
+.box h1{
+    margin-left: 10px;
+    border-bottom: 1px solid black;
+    font-size: 3em;
+    font-family: Swis721 BdCnOul BT Outline,sans-serif;
+}
+
+.box:last-child{
+   
+    display: flex;
+    flex-direction: column;
+}
+.box p{
+    margin: 20px;
+    font-size: 20px;
+    font-weight: lighter;
+    color: #000;;
+}
+.box a {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+    background-color: rgba(0, 0, 0, .2);
+    padding: 30px;
+    font-size: 1.6em;
+    border-radius: 30px;
+    box-shadow: 5px 5px 5px #000;
+
+}
+.box span{
+    font-weight: bold;
+}
+.invisible{
+    display: flex;
+    animation-name: dropDown;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+}
+
+
+/**Media Queries**/
+@media only screen and (min-width:1024px){
+    .button{
+        display: none;
+    }
+
+    .navbar{
+        
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+    .principal{
+        width: 95%;
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+    .principal > div{
+        flex: 1 1 50%;
+        
+    }
+    .jorge{
+        margin-left: 30px;
+        border-bottom: none;
+    }
+
+    .navbar li{
+        margin: 20px;
+        transition: transform .7s ease-in-out;
+    }
+    .navbar li:hover{
+        transform: rotateZ(10deg) ;
+
+    }
+    .container_box{
+        flex-direction: column;
+        height: auto;
+        flex-wrap: wrap;
+    }
+    .container_box .box{
+        
+        flex: 0 1 auto;
+        align-self: flex-start;
+    }
+    .container_box .box:last-child{
+        width: 30%;
+        flex: 1 0 33%;
+        align-self: flex-end;
+        
+    }
+   
+}
+
+@keyframes dropDown{
+    0%{
+        display: none;
+        opacity: .3;
+        transform: translateY(-500px) rotateX(30deg) rotateY(180deg);
+    }
+    50%{
+        display: none;
+    }
+    
+}
+
